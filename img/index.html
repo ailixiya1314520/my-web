@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的动漫世界</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            /* 更现代的字体 */
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            background-image: url('img/pattern.png');
+            background-size: cover;
+            color: #004d40;
+            font-size: 18px;
+            /* 增大基础字体大小 */
+            line-height: 1.8;
+            /* 增大行高 */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 150, 136, 0.8);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #004d40;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            transition: color 0.3s, background-color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .navbar a:active {
+            color: white;
+            background-color: #004d40;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('img/1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            /* 调整标题字体大小 */
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .hero h1::after {
+            content: '🌟';
+            position: absolute;
+            right: -40px;
+            top: 20px;
+            font-size: 1.5em;
+            animation: sparkle 1s infinite alternate;
+        }
+
+        @keyframes sparkle {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(20deg);
+            }
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 600px;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="index.html">首页</a>
+        <a href="gallery.html">相册</a>
+        <a href="about.html">关于我</a>
+        <a href="contact.html">联系方式</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>欢迎来到我的动漫世界</h1>
+            <img src="img/2.jpg" alt="我的头像" class="avatar">
+            <p class="intro">你好，我是ysg，欢迎来到我的个人动漫世界！这里展示了我最喜欢的动漫作品，希望你喜欢。</p>
+            <a href="gallery.html"><button class="cta-button">进入相册</button></a>
+        </div>
+    </section>
+</body>
+
+</html>
