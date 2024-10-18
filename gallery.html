@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            background-image: url('img/pattern.png');
+            background-size: cover;
+            color: #880e4f;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 150, 136, 0.8);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #004d40;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            transition: color 0.3s, background-color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .navbar a:active {
+            color: white;
+            background-color: #004d40;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #ffffff;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '✨';
+            position: absolute;
+            right: -30px;
+            top: 0;
+            font-size: 1.5em;
+            animation: sparkle 1s infinite alternate;
+        }
+
+        @keyframes sparkle {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(20deg);
+            }
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: calc(25% - 10px);
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">首页</a>
+        <a href="gallery.html">相册</a>
+        <a href="about.html">关于我</a>
+        <a href="contact.html">联系方式</a>
+    </nav>
+
+    <h1>我的动漫相册</h1>
+    <div class="gallery">
+        <img src="imgs/1.jpg" alt="动漫图片1">
+        <img src="imgs/2.jpg" alt="动漫图片2">
+        <img src="imgs/3.jpg" alt="动漫图片3">
+        <img src="imgs/4.png" alt="动漫图片4">
+        <img src="imgs/5.jpg" alt="动漫图片5">
+        <img src="imgs/6.png" alt="动漫图片6">
+        <img src="imgs/7.jpg" alt="动漫图片7">
+        <img src="imgs/8.jpg" alt="动漫图片8">
+        <!-- 添加更多图片 -->
+    </div>
+</body>
+
+</html>
